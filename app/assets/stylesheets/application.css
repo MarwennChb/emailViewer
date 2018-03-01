@@ -1,0 +1,115 @@
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+
+body {
+	background: #FC466B;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: white;
+}
+
+#whole {
+	margin-top: 100px;
+	height: 100%;
+}
+
+.row {
+		
+	display: flex;
+	justify-content: flex-start;
+	
+}
+
+#table {
+
+  background-color: white;
+  border : none;
+  border-radius: 15px;
+  color: black;
+  padding: 50px;
+  height: 60vh;
+  
+
+}
+
+.title {
+	padding-bottom: 40px;
+}
+
+.myemails {
+	border-left: 1px solid gray;
+	padding-left: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.emailcontent {
+
+	top: 80px;
+	left : 50px;
+
+}
+
+.body {
+	display: none;
+}
+
+
+
+.myobjects {
+	overflow: scroll;
+	height: 100%;
+	padding-left: 20px;
+}
+
+.date p {
+	font-size: 16px;
+	color: gray;
+	margin-top: 0;
+	padding-top: 0;
+    margin-bottom: 0;
+}
+
+.yes {
+	font-weight: bold;
+}
+
+.emailobj {
+	padding-bottom: 50px;
+}
+
+.thisobject {
+	font-weight: bold;
+}
+
+
+.allobj a {
+	display: block;
+	text-decoration: none;
+    color: black;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.allobj a:hover {
+	text-decoration: none;
+   color: black;
+   background-color: #8955c380;
+}

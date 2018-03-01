@@ -1,0 +1,5 @@
+var item = $('.item-' + <%= @email.id %>); // classe qui comprend l'objet et le body associé
+
+<% if @email.destroyed? %> // si on supprime l'email
+  item.hide(); // on cache son objet et son body
+<% end %>

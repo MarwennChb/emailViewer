@@ -1,0 +1,59 @@
+<section id = "whole" class = "container">
+
+<h1 class = "display-1">Inbox</h1>
+<p class = "display-4">Welcome back.</p>
+
+
+ <section id = "table" class = "row">
+ 	<div class = "col-lg-5 col-sm-4 myobjects">
+ 		<h2 class = "row title">Object</h2>
+
+ 		<div class = "allobj">  
+ 		   <% @emails.each do |email| %>  
+ 		     <%= link_to email, remote: true, method: :get, :id => "objectcase-"+ email.id.to_s, :class => "item-"+ email.id.to_s do %>
+	   	      <div class = "row%>">
+	   	      	
+	            <div class = "offset-lg-1 col-lg-11">
+		           <p class = "row thisobject thisobject-<%= email.id%>"> <%= email.object%></p>
+		             <div class = "row date">
+		         	    <p> <%= email.created_at.strftime("%b %d  %Y - at %I:%M%p") %></p>
+		         	        <div class="read-<%= email.id %>">
+					         	<% if email.read %>
+					         	   <p class = "yes">&nbsp;- Lu</p>
+					         	<% else %>
+					         	  <p>&nbsp;-  Non-lu </p>
+					         	<%end%>
+		                    </div>
+		              </div>
+
+		        </div>
+              
+		    
+	          </div>
+	          <% end %>
+ 		   <% end %>
+ 	    </div>
+ 		
+ 	</div>
+
+ 	<div class = "col-lg-5 col-sm-8 myemails">
+ 		<h2 class = "row title">Content</h2>
+ 		<% @emails.each do |email| %> 
+			  <div class = "row emailcontent item-<%= email.id %>">
+			    <div class = "body inbox-<%=email.id%>">
+			    	<h3 class = "emailobj">Obj : <%=email.
+			    	object%></h3>
+			    	<p><%=email.body%></p> <br>
+			        <%= link_to 'Delete', email, method: :delete, data: { confirm: 'Etes-vous sûr de vouloir supprimer ce message ?'}, :class => 'delete_email', :remote => true%>
+			    </div>
+			   
+			  </div>
+		<% end %>
+ 	</div>
+
+		 
+</section> 
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</section>

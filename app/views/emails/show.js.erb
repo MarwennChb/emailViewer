@@ -1,0 +1,17 @@
+
+var email = $('.inbox-' + <%=@email.id%>); 
+var object = $('.thisobject-' + <%= @email.id %>);
+var objectCase = $('#objectcase-' + <%= @email.id %>);
+var read = $('.read-' + <%= @email.id %>);
+
+
+objectCase.on("click", function () { 
+ 
+  $('.body').hide(); 
+  email.fadeIn(); 
+  
+  object.css("font-weight", "normal"); 
+  objectCase.css("background-color", "#9ff8c9"); 
+  read.html('&nbsp;- Lu').css("color", "gray").css("font-size", "16px").css("font-weight", "bold"); 
+
+}).click();
